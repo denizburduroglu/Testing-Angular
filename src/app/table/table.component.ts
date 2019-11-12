@@ -37,6 +37,7 @@ export class TableComponent {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
     // this.trigger.openMenu();
   }
+  
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;

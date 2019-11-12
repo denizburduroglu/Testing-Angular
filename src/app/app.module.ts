@@ -4,17 +4,21 @@ import { MatSelectModule, MatNativeDateModule, MatDatepickerModule, MatInputModu
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { TableComponent } from './table';
 import { AddTaskComponent } from './addTask';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddTaskComponent,
     TableComponent,
+    LoginComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
