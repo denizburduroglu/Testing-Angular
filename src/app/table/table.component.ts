@@ -31,6 +31,7 @@ export class TableComponent {
 
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   // @ViewChild(MatMenuTrigger, {static:false}) trigger: MatMenuTrigger;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
 
   constructor() {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);
@@ -38,6 +39,7 @@ export class TableComponent {
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
     
   }
 

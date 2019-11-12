@@ -1,1 +1,30 @@
 <h1>Add Task Page</h1>
+<div class="example-container">
+    <mat-form-field>
+        <mat-select placeholder="Status">
+            <mat-option value="Open">Open</mat-option>
+            <mat-option value="Closed">Closed</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Quote Type">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="number" matInput placeholder="Quote#">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Task Type">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Contact Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [matDatepicker]="dueDate" placeholder="Choose a due date">
+        <mat-datepicker-toggle matSuffix [for]="dueDate"></mat-datepicker-toggle>
+        <mat-datepicker #dueDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea matInput placeholder="Task Description"></textarea>
+    </mat-form-field>
+</div>
